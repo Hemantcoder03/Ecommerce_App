@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="@string/welcome_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/open_sans_regular"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/already_have_an_account"
+            android:textSize="@dimen/_15sdp" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_25sdp"
+            android:src="@drawable/ecommerce_app_icon"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/loginEmailLayout"
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:background="@drawable/edittext_background"
+            android:backgroundTint="@color/white"
+            android:elevation="@dimen/_8sdp"
+            android:gravity="center_vertical"
+            app:boxBackgroundMode="none"
+            app:hintEnabled="false"
+            android:layout_gravity="center">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loginEmail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp"
+                android:drawableStart="@drawable/email_icon"
+                android:drawablePadding="@dimen/_10sdp"
+                android:ems="10"
+                android:hint="@string/enter_email"
+                android:inputType="text"
+                android:textColorHint="#858788" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/loginPasswordLayout"
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:background="@drawable/edittext_background"
+            android:backgroundTint="@color/white"
+            android:elevation="@dimen/_8sdp"
+            android:gravity="center_vertical"
+            app:boxBackgroundMode="none"
+            app:hintEnabled="false"
+            android:layout_gravity="center"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loginPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp"
+                android:drawableStart="@drawable/password_icon"
+                android:drawablePadding="@dimen/_10sdp"
+                android:ems="10"
+                android:hint="@string/enter_password"
+                android:inputType="textPassword"
+                android:textColorHint="#858788" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:backgroundTint="#9C27B0"
+            android:text="@string/login"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/_8sdp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/guestBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#27B02E"
+            android:text="@string/guest"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/_8sdp" />
+
+<!--        <CheckedTextView-->
+<!--            android:id="@+id/notRegistered"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="@dimen/_15sdp"-->
+<!--            android:text="@string/don_t_have_an_account" />-->
+
+    </LinearLayout>
+
+
+</LinearLayout>

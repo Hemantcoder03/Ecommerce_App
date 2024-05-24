@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_15sdp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sort_by"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="@color/grey" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sortGroup">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sortLowToHigh"
+            android:text="@string/price_low_to_high"
+            android:layoutDirection="rtl"
+            app:buttonTint="@color/black"
+            android:button="@drawable/rb_selector"
+            android:textAlignment="textStart"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sortHighToLow"
+            android:text="@string/price_high_to_low"
+            android:layoutDirection="rtl"
+            android:button="@drawable/rb_selector"
+            app:buttonTint="@color/black"
+            android:textAlignment="textStart"/>
+    </RadioGroup>
+</LinearLayout>

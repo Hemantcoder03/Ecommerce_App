@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    tools:context=".fragments.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="@string/discover_products"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_17sdp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sortBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:drawableStart="@drawable/sort_icon"
+                android:text="@string/sort_by"
+                android:textColor="@color/black"
+                app:cornerRadius="@dimen/_5sdp"
+                app:icon="@drawable/sort_icon"
+                app:iconTint="@color/black"
+                android:elevation="@dimen/_50sdp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/filterBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:drawableStart="@drawable/sort_icon"
+                android:text="@string/filter"
+                android:textColor="@color/black"
+                app:cornerRadius="@dimen/_5sdp"
+                app:icon="@drawable/filter_icon"
+                app:iconTint="@color/black"
+                android:elevation="@dimen/_50sdp"/>
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/productsGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:horizontalSpacing="@dimen/_10sdp"
+            android:numColumns="2"
+            android:padding="@dimen/_2sdp"
+            android:verticalSpacing="@dimen/_10sdp"
+            tools:listitem="@layout/product_item" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/noProductFound"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:src="@drawable/no_product_found_icon"
+        android:textSize="@dimen/_15sdp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:indeterminateTint="@color/app_theme_color"
+        android:textSize="@dimen/_15sdp"
+        android:visibility="gone" />
+
+</FrameLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SearchFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:elevation="@dimen/_5sdp"
+            android:background="@drawable/edittext_background"
+            android:drawableStart="@drawable/search_icon"
+            android:drawablePadding="@dimen/_5sdp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:hint="@string/search_for_products"
+            android:inputType="text"
+            android:paddingStart="@dimen/_10sdp"
+            android:textColorHint="@color/app_theme_color"
+            android:textSize="@dimen/_14sdp" />
+
+        <GridView
+            android:id="@+id/searchProductGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:horizontalSpacing="@dimen/_10sdp"
+            android:numColumns="2"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:verticalSpacing="@dimen/_10sdp"
+            android:padding="@dimen/_2sdp"
+            tools:listitem="@layout/product_item" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:textSize="@dimen/_15sdp"
+        android:layout_gravity="center"
+        android:id="@+id/noProductFound"
+        android:src="@drawable/no_product_found_icon"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:textSize="@dimen/_15sdp"
+        android:layout_gravity="center"
+        android:id="@+id/progressBar"
+        android:gravity="center"
+        android:indeterminateTint="@color/app_theme_color"
+        android:visibility="gone"/>
+</FrameLayout>
